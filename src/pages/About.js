@@ -5,6 +5,7 @@ import lensaImage from "../img/about-img.jpg";
 //Chart
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const About = () => {
@@ -21,13 +22,14 @@ const About = () => {
   };
 
   const options = {};
+
   const textCenter = {
     id: "textCenter",
     beforeDatasetsDraw(chart, args, pluginOptions) {
       const { ctx, data } = chart;
 
       ctx.save();
-      ctx.font = "bolder 30px sans-serif";
+      ctx.font = "bolder 20px sans-serif";
       ctx.fillStyle = "#5b8fb9";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
@@ -43,10 +45,13 @@ const About = () => {
     <AboutContainer>
       <AboutContainerTop>
         <AboutImg>
-          <img src={lensaImage} alt="" />
+          <img
+            src={lensaImage}
+            alt="AI image of a bald man that hides what a fatty Jason really is."
+          />
         </AboutImg>
         <AboutText>
-          <h3>About Me</h3>
+          <h3>About Me:</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
             repellat placeat dicta consectetur esse quod saepe accusamus rerum,
@@ -109,7 +114,7 @@ const AboutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 80vh;
   width: 80vw;
   margin: auto;
 `;
@@ -186,6 +191,11 @@ const DoughnutContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding: 2rem;
+  div {
+    width: 20%;
+    padding: 2rem;
+  }
 `;
 
 export default About;

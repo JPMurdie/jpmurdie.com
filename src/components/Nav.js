@@ -27,6 +27,7 @@ const StyledNav = styled.nav`
   min-height: 10vh;
   display: flex;
   margin: auto;
+  margin-bottom: 10vh;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
