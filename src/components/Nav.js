@@ -10,6 +10,9 @@ const Nav = () => {
           <a href="#">My Work</a>
         </li>
         <li>
+          <a href="#">My CV</a>
+        </li>
+        <li>
           <a href="#">Shits & Giggles</a>
         </li>
         <li>
