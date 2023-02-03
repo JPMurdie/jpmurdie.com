@@ -14,10 +14,6 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <About />
-      <MyWork />
-      <Blog />
-      <ContactMe />
     </div>
   );
 }

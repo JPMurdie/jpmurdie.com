@@ -2,15 +2,22 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    *, *::before, *::after {
+  box-sizing: inherit;
+}
 
-    body {
-        background: #03001C;
-        font-family: 'Inter', sans-serif;
+html {
+  /* this makes sure the padding and the border is included in the box sizing */
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+html body {
+    padding: 0;
+    margin: 0;
+    overflow-y: inherit;
+    background: #03001C;
+    font-family: 'Inter', sans-serif;
     }
 
     button{
