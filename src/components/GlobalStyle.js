@@ -2,6 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Inter:wght@400;700&family=Lato:wght@400;700&family=Lobster&display=swap");
+
 :root{
     --background: #03001c;
     --feature-background: #301e67;
