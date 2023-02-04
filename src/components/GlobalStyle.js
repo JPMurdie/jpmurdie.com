@@ -1,24 +1,36 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
+:root{
+    --background: #03001c;
+    --feature-background: #301e67;
+    --logo-text: #5b8fb9;
+    --textColor: #B6EADA;
+}
     
     *, *::before, *::after {
-  box-sizing: inherit;
+        box-sizing: inherit;
 }
 
 html {
   /* this makes sure the padding and the border is included in the box sizing */
-  box-sizing: border-box;
-  overflow-y: hidden;
-}
-
-html body {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: var(--background);
     overflow-y: inherit;
-    background: #03001C;
     font-family: 'Inter', sans-serif;
-    }
+}
+
+
+
 
     button{
         font-weight: bold;

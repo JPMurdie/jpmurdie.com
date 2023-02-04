@@ -11,10 +11,10 @@ import ContactMe from "./pages/ContactMe";
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
       <GlobalStyle />
       <Nav />
-    </div>
+    </React.Fragment>
   );
 }
 

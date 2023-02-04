@@ -1,117 +1,105 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import Media from "react-media";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-const Nav = () => {
-  const [showNav, setShowNav] = useState(true);
+function Nav() {
+  const navRef = useRef();
+
+  const showNav = () => {
+    navRef.current.classList.toggle("responsive_nav");
+  };
 
   return (
-    <StyledNav>
-      <Logo>
-        <h1>JPMurdie</h1>
-      </Logo>
-      <Media query="(min-width: 600px)">
-        {(matches) => {
-          return matches ? (
-            <NavList>
-              <ul>
-                <li>
-                  <a href="#">My Work</a>
-                </li>
-                <li>
-                  <a href="#">My CV</a>
-                </li>
-                <li>
-                  <a href="#">Shits & Giggles</a>
-                </li>
-                <li>
-                  <a href="#">Contact Me</a>
-                </li>
-              </ul>
-            </NavList>
-          ) : (
-            <>
-              {!showNav && (
-                <BurgerButton>
-                  <button onClick={() => setShowNav(true)}>Burger</button>
-                </BurgerButton>
-              )}
-              {showNav && (
-                <BurgerNav>
-                  <BurgerButton>
-                    <button onClick={() => setShowNav(false)}>
-                      Close Navbar
-                    </button>
-                  </BurgerButton>
-                  <h1>Dashboard</h1>
-                  <h2>Menu item</h2>
-                  <h2>Menu item</h2>
-                  <h2>Menu item</h2>
-                </BurgerNav>
-              )}
-            </>
-          );
-        }}
-      </Media>
-    </StyledNav>
+    <NavHeader>
+      <h3>
+        <a>JPMurdie</a>
+      </h3>
+      <nav ref={navRef}>
+        <a href="">My Work</a>
+        <a href="">My CV</a>
+        <a href="">Blog</a>
+        <a href="">Contact</a>
+        <button className="nav-btn nav-close-btn" onClick={showNav}>
+          <FaTimes />
+        </button>
+      </nav>
+      <button className="nav-btn" onClick={showNav}>
+        <FaBars />
+      </button>
+    </NavHeader>
   );
-};
+}
 
-const StyledNav = styled.nav`
+const NavHeader = styled.div`
+  //Standard Styling
   display: flex;
-  flex-direction: column;
   align-items: center;
-  min-height: ${(showNav) => (showNav === true ? "100vh" : "10vh")};
-  margin-bottom: 10vh;
-  background: #301e67;
-  box-shadow: 0px 10px 50px #b6eada;
-  a {
-    border-radius: 10px;
-    padding: 1rem;
-    background-color: #03001c;
-    color: #b6eada;
+  justify-content: space-between;
+  height: 10vh;
+  padding: 0 2rem;
+  border-radius: 5px;
+  background-color: var(--feature-background);
+  color: var(--textColor);
+  nav a {
+    margin: 0 2rem;
+    padding: 1rem 2rem;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: lighter;
+    color: var(--textColor);
+    transition: 1s ease-in-out;
+    :hover {
+      background-color: var(--textColor);
+      color: var(--background);
+    }
   }
-  ul {
-    display: flex;
-    list-style: none;
+  .nav-btn {
+    padding: 0.5rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
   }
-  li {
-    position: relative;
+  //Reponsive Elements
+  @media only screen and (max-width: 1024px) {
+    .nav-btn {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: var(--feature-background);
+      transition: 1s;
+      transform: translateY(-100vh);
+    }
+
+    .responsive_nav {
+      transform: none;
+    }
+
+    .nav-close-btn {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+
+    nav a {
+      font-size: 1.5rem;
+    }
   }
-`;
-
-const Logo = styled.div`
-  h1 {
-    color: #5b8fb9;
-    -webkit-text-stroke: 1px #b6eada;
-    font-size: 2.5rem;
-    font-family: "Lobster", cursive;
-    font-weight: lighter;
-  }
-`;
-
-const BurgerButton = styled.div`
-  padding: 1rem;
-`;
-
-const BurgerNav = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  justify-content: center;
-  align-items: center;
-  background: #301e67;
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
-  transition: all 0.5s ease;
-`;
-
-const NavList = styled.div`
-  display: flex;
 `;
 
 export default Nav;
