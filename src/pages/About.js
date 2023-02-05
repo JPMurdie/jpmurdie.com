@@ -15,40 +15,44 @@ const About = () => {
         </div>
         <div className="about-list">
           <div>
-            <h5>Title</h5>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h5>Currently Studying</h5>
+            <p>React Course from DevEd - Youtuber</p>
           </div>
           <div>
-            <h5>Title</h5>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h5>Recent Non-Tech Qualification</h5>
+            <p>Prince 2 Agile Practitioner</p>
           </div>
           <div>
-            <h5>Title</h5>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h5>Recent Tech Qualification</h5>
+            <p>Fullstack Diploma from the Code Institute</p>
           </div>
           <div>
-            <h5>Title</h5>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h5>Current Role</h5>
+            <p>Business Insight Analyst</p>
           </div>
           <div>
-            <h5>Title</h5>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h5>Favourite Author</h5>
+            <p>Brent Weeks</p>
           </div>
           <div>
-            <h5>Title</h5>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h5>Favourite Movie</h5>
+            <p>Lucky Number Slevin</p>
           </div>
           <div>
-            <h5>Title</h5>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h5>Favourite Company</h5>
+            <p>Neuralink</p>
           </div>
           <div>
-            <h5>Title</h5>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h5>Chess.com Rating</h5>
+            <p>625</p>
           </div>
         </div>
       </div>
-      <div className="about-container box3"></div>
+      <div className="about-container box3">
+        <div className="about-title">
+          <h4 className="about-me">My Skills</h4>
+        </div>
+      </div>
     </AboutContainer>
   );
 };
@@ -74,6 +78,7 @@ const AboutContainer = styled.div`
     width: 30%;
     height: 50%;
     img {
+      border: 5px solid var(--textColor);
       border-radius: 50%;
       overflow: hidden;
       object-fit: cover;
@@ -87,6 +92,7 @@ const AboutContainer = styled.div`
     width: 70%;
     min-height: 50%;
     .about-me {
+      height: auto;
       font-family: "Lobster", cursive;
       font-size: 3rem;
       color: var(--logo-text);
@@ -97,8 +103,8 @@ const AboutContainer = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 20%;
       width: 100%;
+      height: 20%;
       h3 {
         position: relative;
         color: var(--textColor);
@@ -126,6 +132,7 @@ const AboutContainer = styled.div`
         color: var(--textColor);
         max-height: 25%;
         h5 {
+          color: var(--logo-text);
           padding: 0.5rem;
           background-color: var(--feature-background);
           max-height: 50%;
@@ -137,9 +144,9 @@ const AboutContainer = styled.div`
           width: 100%;
         }
         p {
-          font-size: 1rem;
+          font-size: 0.8rem;
           max-height: 50%;
-          margin: 0;
+          margin: 0.2rem 0 0.2rem 0;
           padding: 0;
           position: relative;
           display: flex;
@@ -154,6 +161,24 @@ const AboutContainer = styled.div`
   .box3 {
     width: 100%;
     height: 50%;
+    .about-me {
+      font-family: "Lobster", cursive;
+      font-size: 3rem;
+      color: var(--logo-text);
+      -webkit-text-stroke: 1px var(--textColor);
+    }
+    .about-title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 20%;
+      width: 100%;
+      h3 {
+        position: relative;
+        color: var(--textColor);
+      }
+    }
   }
   //Reponsive Elements
   @media only screen and (max-width: 1023px) {
@@ -181,9 +206,11 @@ const AboutContainer = styled.div`
         font-size: 2rem;
       }
       .about-title {
+        max-height: 8%;
         justify-content: center;
         align-items: center;
         height: auto;
+        margin-bottom: 0.5rem;
       }
       .about-list {
         justify-content: center;
