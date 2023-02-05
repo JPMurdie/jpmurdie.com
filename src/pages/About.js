@@ -2,199 +2,203 @@ import React from "react";
 import styled from "styled-components";
 //Images
 import lensaImage from "../img/about-img.jpg";
-//Chart
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
-
-ChartJS.register(ArcElement, Tooltip, Legend);
 
 const About = () => {
-  const data = {
-    labels: [],
-    datasets: [
-      {
-        label: "Poll",
-        data: [80, 20],
-        backgroundColor: ["#5b8fb9", "#03001C"],
-        borderColor: ["#b6eada", "#03001C"],
-      },
-    ],
-  };
-
-  const options = {};
-
-  const textCenter = {
-    id: "textCenter",
-    beforeDatasetsDraw(chart, args, pluginOptions) {
-      const { ctx, data } = chart;
-
-      ctx.save();
-      ctx.font = "bolder 20px sans-serif";
-      ctx.fillStyle = "#5b8fb9";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.fillText(
-        "HTML5",
-        chart.getDatasetMeta(0).data[0].x,
-        chart.getDatasetMeta(0).data[0].y
-      );
-    },
-  };
-
   return (
     <AboutContainer>
-      <AboutContainerTop>
-        <AboutImg>
-          <img
-            src={lensaImage}
-            alt="AI image of a bald man that hides what a fatty Jason really is."
-          />
-        </AboutImg>
-        <AboutText>
-          <h3>About Me:</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
-            repellat placeat dicta consectetur esse quod saepe accusamus rerum,
-            at ex, cupiditate ducimus repudiandae id rem obcaecati quibusdam
-            soluta, quidem maiores doloribus nam. Odio blanditiis ex voluptate
-            ratione consequatur impedit doloremque laudantium eos iure quo! Quod
-            quis culpa molestiae. Quaerat, mollitia.
-          </p>
-        </AboutText>
-      </AboutContainerTop>
-      <AboutContainerBottom>
-        <SkillsText>
-          <h3>My Skills:</h3>
-        </SkillsText>
-
-        <DoughnutContainer>
+      <div className="about-container box1">
+        <img src={lensaImage} alt="" />
+      </div>
+      <div className="about-container box2">
+        <div className="about-title">
+          <h4 className="about-me">About Me</h4>
+        </div>
+        <div className="about-list">
           <div>
-            <Doughnut
-              data={data}
-              options={options}
-              plugins={[textCenter]}
-            ></Doughnut>
+            <h5>Title</h5>
+            <p>Lorem ipsum dolor sit amet.</p>
           </div>
           <div>
-            <Doughnut
-              data={data}
-              options={options}
-              plugins={[textCenter]}
-            ></Doughnut>
+            <h5>Title</h5>
+            <p>Lorem ipsum dolor sit amet.</p>
           </div>
           <div>
-            <Doughnut
-              data={data}
-              options={options}
-              plugins={[textCenter]}
-            ></Doughnut>
+            <h5>Title</h5>
+            <p>Lorem ipsum dolor sit amet.</p>
           </div>
           <div>
-            <Doughnut
-              data={data}
-              options={options}
-              plugins={[textCenter]}
-            ></Doughnut>
+            <h5>Title</h5>
+            <p>Lorem ipsum dolor sit amet.</p>
           </div>
           <div>
-            <Doughnut
-              data={data}
-              options={options}
-              plugins={[textCenter]}
-            ></Doughnut>
+            <h5>Title</h5>
+            <p>Lorem ipsum dolor sit amet.</p>
           </div>
-        </DoughnutContainer>
-      </AboutContainerBottom>
+          <div>
+            <h5>Title</h5>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div>
+            <h5>Title</h5>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div>
+            <h5>Title</h5>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+      <div className="about-container box3"></div>
     </AboutContainer>
   );
 };
 
+//Standard Style Component
 const AboutContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-  width: 80vw;
-  margin: auto;
-`;
-
-const AboutContainerTop = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50%;
-  width: 100%;
-  padding: 2rem;
+  flex-wrap: wrap;
+  height: 90vh;
   margin-top: 2rem;
-`;
-
-const AboutContainerBottom = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 50%;
-  width: 100%;
-  padding: 2rem;
-  margin-top: 2rem;
-`;
-
-const AboutText = styled.div`
-  position: relative;
-  min-width: 60%;
-  height: 100%;
-  margin-top: 2rem;
-  margin-left: 2rem;
-  h3 {
-    color: #b6eada;
+  padding: 0 1rem;
+  .about-container {
+    height: 50px;
+    display: flex;
+    padding: 1rem;
   }
-  p {
-    color: #b6eada;
+  .box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 30%;
+    height: 50%;
+    img {
+      border-radius: 50%;
+      overflow: hidden;
+      object-fit: cover;
+    }
   }
-`;
+  .box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    min-height: 50%;
+    .about-me {
+      font-family: "Lobster", cursive;
+      font-size: 3rem;
+      color: var(--logo-text);
+      -webkit-text-stroke: 1px var(--textColor);
+    }
+    .about-title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 20%;
+      width: 100%;
+      h3 {
+        position: relative;
+        color: var(--textColor);
+      }
+    }
+    .about-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      min-height: 80%;
+      width: 100%;
+      div {
+        border: 1px solid var(--textColor);
+        position: relative;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 10px;
+        flex-wrap: wrap;
+        width: 45%;
+        color: var(--textColor);
+        max-height: 25%;
+        h5 {
+          padding: 0.5rem;
+          background-color: var(--feature-background);
+          max-height: 50%;
+          margin: 0 0 0.1rem 0;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+        }
+        p {
+          font-size: 1rem;
+          max-height: 50%;
+          margin: 0;
+          padding: 0;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          color: var(--textColor);
+        }
+      }
+    }
+  }
+  .box3 {
+    width: 100%;
+    height: 50%;
+  }
+  //Reponsive Elements
+  @media only screen and (max-width: 1023px) {
+    min-height: 90vh;
+    overflow-y: scroll;
 
-const AboutImg = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 40%;
-  margin-top: 2rem;
-  padding: 2rem;
-  img {
-    border: solid 2px #b6eada;
-    border-radius: 50%;
-    max-width: 80%;
-    max-height: 80%;
-    object-fit: cover;
-  }
-`;
-
-const SkillsText = styled.div`
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  min-width: 100%;
-  height: 10%;
-  h3 {
-    color: #b6eada;
-  }
-  p {
-    color: #b6eada;
-  }
-`;
-
-const DoughnutContainer = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  padding: 2rem;
-  div {
-    width: 20%;
-    padding: 2rem;
+    .box1 {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 30vh;
+      img {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        object-fit: cover;
+      }
+    }
+    .box2 {
+      min-height: 100%;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      .about-me {
+        font-size: 2rem;
+      }
+      .about-title {
+        justify-content: center;
+        align-items: center;
+        height: auto;
+      }
+      .about-list {
+        justify-content: center;
+        height: auto;
+        div {
+          margin-right: 0;
+          margin-bottom: 10px;
+          flex-direction: column;
+          width: 100%;
+          p {
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
   }
 `;
 

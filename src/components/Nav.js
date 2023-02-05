@@ -36,7 +36,7 @@ function Nav() {
 }
 
 //Nav Styles
-const Logo = styled.div`
+export const Logo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +55,7 @@ const NavContainer = styled.div`
   align-items: center;
   justify-content: right;
   width: 75%;
+  z-index: 1;
   button {
     display: none;
   }
