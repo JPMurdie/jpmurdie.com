@@ -52,6 +52,32 @@ const About = () => {
         <div className="about-title">
           <h4 className="about-me">My Skills</h4>
         </div>
+        <div className="skills">
+          <li>
+            <h4>HTML5</h4>
+            <span className="bar">
+              <span className="html"></span>
+            </span>
+          </li>
+          <li>
+            <h4>CSS3 / Bootstrap</h4>
+            <span className="bar">
+              <span className="css3"></span>
+            </span>
+          </li>
+          <li>
+            <h4>JS</h4>
+            <span className="bar">
+              <span className="js"></span>
+            </span>
+          </li>
+          <li>
+            <h4>React</h4>
+            <span className="bar">
+              <span className="react"></span>
+            </span>
+          </li>
+        </div>
       </div>
     </AboutContainer>
   );
@@ -161,19 +187,70 @@ const AboutContainer = styled.div`
   .box3 {
     width: 100%;
     height: 50%;
-    .about-me {
-      font-family: "Lobster", cursive;
-      font-size: 3rem;
-      color: var(--logo-text);
-      -webkit-text-stroke: 1px var(--textColor);
-    }
-    .about-title {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 20%;
+    .skills {
       width: 100%;
+      margin: 60px auto;
+      color: var(--textColor);
+      padding: 20px;
+      li {
+        width: 50%;
+        list-style-type: none;
+        margin: 20px 0px;
+        padding: 10px;
+      }
+      .bar {
+        background: #353b48;
+        display: block;
+        height: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px var(--feature-background),
+          0 1px 2px var(--feature-background);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        :hover{
+          box-shadow: 0 14px 28px var(--feature-background),
+          0 1px 2px var(--feature-background);
+        }
+        span{
+          height: 20px;
+          float: left;
+          background: linear-gradient(135deg, rgba(236,0,140,1)0%, rgba(252,103,103,1)100%);
+        }
+        .html{
+          width: 90%;
+          animation: html 3s;
+        }
+        .css3{
+          width: 90%;
+          animation: css 3s;
+        }
+        .js {
+          width: 80%;
+          animation: js 3s;
+        }
+        .react{
+          width: 90%;
+          animation: react 3s;
+        }
+    }
+    h4 {
+      margin: 5px;
+      color: var(--textColor);
+      .about-me {
+        font-family: "Lobster", cursive;
+        font-size: 3rem;
+        color: var(--logo-text);
+        -webkit-text-stroke: 1px var(--textColor);
+      }
+      .about-title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20%;
+        width: 100%;
+      }
       h3 {
         position: relative;
         color: var(--textColor);
