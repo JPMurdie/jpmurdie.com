@@ -36,7 +36,7 @@ body {
     padding: 0;
     margin: 0;
     background: var(--background);
-    overflow-y: inherit;
+    overflow-y: hidden;
     font-family: 'Inter', sans-serif;
     ${fontSize(1.6, 0.5, 2.4)}
 }

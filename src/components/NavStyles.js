@@ -5,9 +5,9 @@ import { flexy, fontSize } from "./GlobalStyle";
 export const NavHeader = styled.div`
   //BASED STYLINGS
   ${flexy({ jc: "space-between" })}
-  ${fontSize(1.6, 1, 2.4)}
-  height: 10vh;
-  padding: 0 10%;
+  ${fontSize(1.6, 1, 2)}
+  min-height: 10vh;
+  padding: 1rem 10%;
   background-color: var(--feature-background);
   color: var(--textColor);
   //LOGO
@@ -53,12 +53,14 @@ export const NavHeader = styled.div`
 
   //media Queries
   @media only screen and (max-width: 1023px) {
+    height: auto;
+    padding: 1rem 0rem;
     //LOGO LESS THAN 1023PX
     #logo {
       ${fontSize(2, 2.5, 4)}
       width: 100%;
     }
-    //LOGO LESS THAN 1023PX
+    //NAV LESS THAN 1023PX
     nav {
       position: fixed;
       flex-direction: column;
@@ -69,6 +71,8 @@ export const NavHeader = styled.div`
       left: 0;
       height: 100%;
       width: 100%;
+      display: hidden;
+      opacity: 0;
       background-color: var(--feature-background);
       background-color: var(--feature-background);
       transform: translateY(100%);
@@ -92,6 +96,8 @@ export const NavHeader = styled.div`
     .responsive_nav {
       transform: none;
       transition: 1s;
+      display: flex;
+      opacity: 1;
     }
   }
 `;
