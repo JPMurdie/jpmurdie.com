@@ -14,7 +14,6 @@ function App() {
     <React.Fragment>
       <GlobalStyle />
       <Nav />
-      <About />
     </React.Fragment>
   );
 }

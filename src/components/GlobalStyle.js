@@ -1,4 +1,16 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
+
+export const flexy = ({ jc }) => css`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: ${jc || "center"};
+`;
+
+export const fontSize = (min, val, max) => `
+font-size: calc(1.625rem * ((100vw - 18.75em) / (1600 - 300)));
+font-size: clamp(${min}rem,${val}rem + 2vw,${max}rem);
+`;
 
 const GlobalStyle = createGlobalStyle`
 
@@ -10,17 +22,14 @@ const GlobalStyle = createGlobalStyle`
     --logo-text: #5b8fb9;
     --textColor: #B6EADA;
 }
-    
-    *, *::before, *::after {
-        box-sizing: inherit;
-}
-
+ 
 html {
   /* this makes sure the padding and the border is included in the box sizing */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     overflow-y: hidden;
+    font-size: 62.5%;
 }
 
 body {
@@ -29,56 +38,16 @@ body {
     background: var(--background);
     overflow-y: inherit;
     font-family: 'Inter', sans-serif;
+    ${fontSize(1.6, 0.5, 2.4)}
 }
 
+h2{
+    font-weight: lighter;
+    font-size: 4rem;
+}
 
-
-
-    button{
-        font-weight: bold;
-        font-size: 1.1rem;
-        cursor: pointer;
-        padding: 1rem 2rem;
-        border: 3px solid #23d997;
-        background: transparent;
-        color: white;
-        transition: all 0.5s ease;
-        font-family: 'Inter', sans-serif;
-        &:hover{
-            background-color: #23d997;
-            color: white;
-        }
-    }
-
-    h2{
-        font-weight: lighter;
-        font-size: 4rem;
-    }
-
-    h3{
-        color: white;
-    }
-
-    h4{
-        font-weight: bold;
-        font-size: 2rem;
-    }
-
-    a{
-        font-size: 1.1rem;
-    }
-
-    span{
-        font-weight: bold;
-        color: #23d997;  
-    }
-
-    p{
-        padding: 3rem 0rem;
-        color: #ccc;
-        font-size: 1.4rem;
-        line-height: 150%;
-    }
-`;
+h4{
+    font-size: 2rem;
+}`;
 
 export default GlobalStyle;

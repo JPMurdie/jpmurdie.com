@@ -208,20 +208,24 @@ const AboutContainer = styled.div`
         box-shadow: 0 1px 3px var(--feature-background),
           0 1px 2px var(--feature-background);
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        :hover{
+        :hover {
           box-shadow: 0 14px 28px var(--feature-background),
-          0 1px 2px var(--feature-background);
+            0 1px 2px var(--feature-background);
         }
-        span{
+        span {
           height: 20px;
           float: left;
-          background: linear-gradient(135deg, rgba(236,0,140,1)0%, rgba(252,103,103,1)100%);
+          background: linear-gradient(
+            135deg,
+            rgba(236, 0, 140, 1),
+            rgba(252, 103, 103, 1)
+          );
         }
-        .html{
+        .html {
           width: 90%;
           animation: html 3s;
         }
-        .css3{
+        .css3 {
           width: 90%;
           animation: css 3s;
         }
@@ -229,76 +233,77 @@ const AboutContainer = styled.div`
           width: 80%;
           animation: js 3s;
         }
-        .react{
+        .react {
           width: 90%;
           animation: react 3s;
         }
-    }
-    h4 {
-      margin: 5px;
-      color: var(--textColor);
-      .about-me {
-        font-family: "Lobster", cursive;
-        font-size: 3rem;
-        color: var(--logo-text);
-        -webkit-text-stroke: 1px var(--textColor);
       }
-      .about-title {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 20%;
-        width: 100%;
-      }
-      h3 {
-        position: relative;
+      h4 {
+        margin: 5px;
         color: var(--textColor);
-      }
-    }
-  }
-  //Reponsive Elements
-  @media only screen and (max-width: 1023px) {
-    min-height: 90vh;
-    overflow-y: scroll;
-
-    .box1 {
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 30vh;
-      img {
-        width: auto;
-        height: auto;
-        overflow: hidden;
-        object-fit: cover;
-      }
-    }
-    .box2 {
-      min-height: 100%;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      .about-me {
-        font-size: 2rem;
-      }
-      .about-title {
-        max-height: 8%;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        margin-bottom: 0.5rem;
-      }
-      .about-list {
-        justify-content: center;
-        height: auto;
-        div {
-          margin-right: 0;
-          margin-bottom: 10px;
-          flex-direction: column;
+        .about-me {
+          font-family: "Lobster", cursive;
+          font-size: 3rem;
+          color: var(--logo-text);
+          -webkit-text-stroke: 1px var(--textColor);
+        }
+        .about-title {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 20%;
           width: 100%;
-          p {
-            padding: 0.5rem;
+        }
+        h3 {
+          position: relative;
+          color: var(--textColor);
+        }
+      }
+    }
+    //Reponsive Elements
+    @media only screen and (max-width: 1023px) {
+      min-height: 90vh;
+      overflow-y: scroll;
+
+      .box1 {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 30vh;
+        img {
+          width: auto;
+          height: auto;
+          overflow: hidden;
+          object-fit: cover;
+        }
+      }
+      .box2 {
+        min-height: 100%;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        .about-me {
+          font-size: 2rem;
+        }
+        .about-title {
+          max-height: 8%;
+          justify-content: center;
+          align-items: center;
+          height: auto;
+          margin-bottom: 0.5rem;
+        }
+        .about-list {
+          justify-content: center;
+          height: auto;
+          div {
+            margin-right: 0;
+            margin-bottom: 10px;
+            flex-direction: column;
+            width: 100%;
+            p {
+              padding: 0.5rem;
+            }
           }
         }
       }
