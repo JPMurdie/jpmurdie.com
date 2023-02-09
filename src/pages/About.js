@@ -59,6 +59,7 @@ const ContentContainer = styled.div`
   height: 100%;
   padding: 1rem;
   p {
+    box-sizing: border-box;
     height: 100%;
     overflow: hidden;
     flex-shrink: 1;

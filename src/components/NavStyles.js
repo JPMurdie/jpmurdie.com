@@ -6,6 +6,7 @@ export const NavHeader = styled.div`
   //BASED STYLINGS
   ${flexy({ jc: "space-between" })}
   ${fontSize(1.6, 1, 2)}
+  box-sizing: border-box;
   min-height: 10vh;
   padding: 1rem 10%;
   background-color: var(--feature-background);
@@ -76,6 +77,7 @@ export const NavHeader = styled.div`
       background-color: var(--feature-background);
       background-color: var(--feature-background);
       transform: translateY(100%);
+      z-index: 1;
       a {
         ${fontSize(2, 2, 3)}
       }
