@@ -6,12 +6,7 @@ export const PageContainer = styled.div`
   ${flexy("center")}
   height: 90vh;
   //PAGE CONTAINER MEDIA QUERIES
-  @media only screen and (max-width: 1023px) {
-    min-height: 90vh;
-    overflow: scroll;
-    overflow-y: scroll;
-  }
-  @media only screen and (max-height: 900px) {
+  @media only screen and (max-width: 1023px) and (max-height: 900px) {
     min-height: 90vh;
     overflow: scroll;
     overflow-y: scroll;
@@ -59,7 +54,7 @@ export const Three_T4_8B12 = styled.div`
   }
   //ABOUTPAGE LAYOUT MEDIA QUERIES
   @media only screen and (max-width: 1023px) {
-    overflow-y: scroll;
+    height: auto;
     //BOXES
     //BOX1
     .box1 {
