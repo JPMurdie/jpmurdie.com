@@ -11,27 +11,19 @@ const About = () => {
       <Three_T4_8B12>
         <div className="box1">
           <ContentContainer>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus, ratione. Corporis recusandae amet aut distinctio,
-              sunt iure asperiores obcaecati fugiat placeat quaerat nam
-              doloremque earum non. Ea facere repellat officia corporis iste
-              velit, accusamus, sunt temporibus atque assumenda eaque,
-              exercitationem animi! Eum, quisquam. Recusandae accusantium
-              dignissimos officia amet rerum alias.
-            </p>
+            <img src={lensaImage} alt="" />
           </ContentContainer>
         </div>
         <div className="box2">
           <ContentContainer>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus, ratione. Corporis recusandae amet aut distinctio,
-              sunt iure asperiores obcaecati fugiat placeat quaerat nam
-              doloremque earum non. Ea facere repellat officia corporis iste
-              velit, accusamus, sunt temporibus atque assumenda eaque,
-              exercitationem animi! Eum, quisquam. Recusandae accusantium
-              dignissimos officia amet rerum alias.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Repellendus, dolores perferendis, maxime ipsam illo impedit
+              tempora consequatur itaque, architecto ducimus iure vero
+              perspiciatis quam est. Expedita voluptate ad, eum repudiandae in
+              temporibus debitis architecto obcaecati quam quas sed explicabo
+              consectetur distinctio quae placeat esse veniam tempore possimus
+              similique ea. Rerum!
             </p>
           </ContentContainer>
         </div>
@@ -56,13 +48,31 @@ const About = () => {
 const ContentContainer = styled.div`
   ${flexy("center")};
   box-sizing: border-box;
+  min-height: 300px;
   height: 100%;
-  padding: 1rem;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  img {
+    object-fit: cover;
+    max-height: 350px;
+    height: auto;
+    width: 100%;
+    border-radius: 50%;
+    margin: 5rem;
+    border: 1px solid black;
+    outline: 3px solid var(--textColor);
+  }
   p {
+    ${flexy("center")};
     box-sizing: border-box;
     height: 100%;
     overflow: hidden;
     flex-shrink: 1;
+  }
+  @media only screen and (max-width: 1023px), screen and (max-height: 900px) {
+    img {
+      max-height: 250px;
+    }
   }
 `;
 

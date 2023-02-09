@@ -59,6 +59,8 @@ export const NavHeader = styled.div`
     //LOGO LESS THAN 1023PX
     #logo {
       ${fontSize(2, 2.5, 4)}
+      ${flexy({ jc: "left" })}
+      margin-left: 2rem;
       width: 100%;
     }
     //NAV LESS THAN 1023PX

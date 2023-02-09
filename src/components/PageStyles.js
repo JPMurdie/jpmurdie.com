@@ -31,11 +31,10 @@ export const Three_T4_8B12 = styled.div`
     box-sizing: inherit;
     overflow: hidden;
     min-height: 300px;
-    height: auto;
+    height: 50%;
   }
   //BOX1
   .box1 {
-    background: green;
     width: 30%;
   }
   //BOX2
