@@ -16,7 +16,7 @@ function Nav() {
   return (
     <NavHeader>
       <div id="logo">
-        <a>JPMurdie</a>
+        <a>JPM Designs</a>
       </div>
       <nav ref={navRef}>
         <a href="">My Work</a>
