@@ -5,21 +5,26 @@ export const PageContainer = styled.div`
   //STANDARD PAGE CONTAINER
   ${flexy("center")}
   height: 90vh;
+  margin-top: 10vh;
+  padding: 2rem;
   box-sizing: border-box;
   //PAGE CONTAINER MEDIA QUERIES
-  @media only screen and (max-width: 1023px), screen and (max-height: 900px) {
-    min-height: 90vh;
+  @media only screen and (max-width: 1023px), screen and (max-height: 841px) {
+    height: auto;
     overflow-y: scroll;
+  }
+  @media only screen and (max-width: 1023px) {
+    margin-top: 100px;
   }
 `;
 
 //3 BOX LAYOUTS
 export const Three_T4_8B12 = styled.div`
   //ABOUT PAGE LAYOUT
-  min-height: 90vh;
-  height: 90vh;
+  position: relative;
+  height: 100%;
   width: 100%;
-  padding: 0 10%;
+  box-sizing: border-box;
   ${flexy("center")};
   flex-direction: row;
   flex-wrap: wrap;
@@ -27,7 +32,6 @@ export const Three_T4_8B12 = styled.div`
   .box1,
   .box2,
   .box3 {
-    position: relative;
     box-sizing: inherit;
     overflow: hidden;
     min-height: 300px;
@@ -49,7 +53,9 @@ export const Three_T4_8B12 = styled.div`
   }
   //ABOUTPAGE LAYOUT MEDIA QUERIES
   @media only screen and (max-width: 1023px) {
-    min-height: 100%;
+    ${flexy("center")};
+    margin-top: 2rem;
+    height: auto;
     margin-bottom: 2rem;
     //BOXES
     .box1,
@@ -60,7 +66,6 @@ export const Three_T4_8B12 = styled.div`
     //BOX1
     .box1 {
       ${flexy("center")};
-      background: green;
       width: 100%;
       height: auto;
     }

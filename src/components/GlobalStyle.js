@@ -28,7 +28,7 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow-y: hidden;
+    overflow-y: scroll;
     font-size: 62.5%;
 }
 

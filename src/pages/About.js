@@ -50,26 +50,26 @@ const ContentContainer = styled.div`
   box-sizing: border-box;
   min-height: 300px;
   height: 100%;
-  padding: 0 2rem;
+  padding: 2rem;
   margin-bottom: 1rem;
   img {
+    box-sizing: border-box;
+    padding: 0.5rem;
     object-fit: cover;
-    max-height: 350px;
-    height: auto;
-    width: 100%;
+    height: 100%;
+    max-height: 275px;
+    width: auto;
     border-radius: 50%;
-    margin: 5rem;
-    border: 1px solid black;
-    outline: 3px solid var(--textColor);
   }
   p {
     ${flexy("center")};
     box-sizing: border-box;
     height: 100%;
     overflow: hidden;
+    margin: 0;
     flex-shrink: 1;
   }
-  @media only screen and (max-width: 1023px), screen and (max-height: 900px) {
+  @media only screen and (max-width: 1023px), screen and (max-height: 841px) {
     img {
       max-height: 250px;
     }

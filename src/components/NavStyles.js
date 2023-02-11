@@ -4,10 +4,16 @@ import { flexy, fontSize } from "./GlobalStyle";
 //NESTED NAV STYLES
 export const NavHeader = styled.div`
   //BASED STYLINGS
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100px;
+  height: 10vh;
   ${flexy({ jc: "space-between" })}
   ${fontSize(1.6, 1, 2)}
   box-sizing: border-box;
-  min-height: 10vh;
   padding: 1rem 10%;
   background-color: var(--feature-background);
   color: var(--textColor);
@@ -54,13 +60,19 @@ export const NavHeader = styled.div`
 
   //media Queries
   @media only screen and (max-width: 1023px) {
-    height: auto;
-    padding: 1rem 0rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100px;
+    height: 10vh;
     //LOGO LESS THAN 1023PX
     #logo {
       ${fontSize(2, 2.5, 4)}
       ${flexy({ jc: "left" })}
       margin-left: 2rem;
+      padding: 1rem 1rem;
       width: 100%;
     }
     //NAV LESS THAN 1023PX
