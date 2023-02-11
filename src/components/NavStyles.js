@@ -19,6 +19,7 @@ export const NavHeader = styled.div`
   color: var(--textColor);
   //LOGO
   #logo {
+    text-decoration: none;
     font-family: "Lobster", cursive;
     color: var(--logo-text);
     -webkit-text-stroke: 1px var(--textColor);
@@ -55,7 +56,7 @@ export const NavHeader = styled.div`
     display: none;
     visibility: hidden;
     opacity: 0;
-    font-size: 1.8rem;
+    ${fontSize(2.4, 1.5, 4.6)}
   }
 
   //media Queries
@@ -71,7 +72,6 @@ export const NavHeader = styled.div`
     #logo {
       ${fontSize(2, 2.5, 4)}
       ${flexy({ jc: "left" })}
-      margin-left: 2rem;
       padding: 1rem 1rem;
       width: 100%;
     }
@@ -98,11 +98,19 @@ export const NavHeader = styled.div`
     }
     //RESPONSIVE NAV BUTTONS LESS THAN 1023PX
     .nav-btn {
+      ${flexy({ jc: "center" })}
+      justify-content: center;
       width: 20%;
       align-items: center;
       display: inline;
       visibility: visible;
       opacity: 1;
+      svg {
+        ${flexy({ jc: "center" })}
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
     }
     .nav-close-btn {
       position: absolute;
@@ -111,6 +119,12 @@ export const NavHeader = styled.div`
     }
     .responsive_nav {
       transform: none;
+      transition: 1s;
+      display: flex;
+      opacity: 1;
+    }
+    .mobile_responsive_nav {
+      transform: translateY(100%);
       transition: 1s;
       display: flex;
       opacity: 1;

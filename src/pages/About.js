@@ -1,21 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { PageContainer, Three_T4_8B12 } from "../components/PageStyles";
-import { flexy, fontSize } from "../components/GlobalStyle";
+import { PageContainer, THREE_T4_8B12 } from "../components/PageStyles";
+import { flexy } from "../components/GlobalStyle";
 //Images
 import lensaImage from "../img/about-img.jpg";
 
 const About = () => {
   return (
     <PageContainer>
-      <Three_T4_8B12>
-        <div className="box1">
-          <ContentContainer>
+      <THREE_T4_8B12>
+        <div className="box box1">
+          <AboutContentContainer>
             <img src={lensaImage} alt="" />
-          </ContentContainer>
+          </AboutContentContainer>
         </div>
-        <div className="box2">
-          <ContentContainer>
+        <div className="box box2">
+          <AboutContentContainer>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Repellendus, dolores perferendis, maxime ipsam illo impedit
@@ -25,10 +25,10 @@ const About = () => {
               consectetur distinctio quae placeat esse veniam tempore possimus
               similique ea. Rerum!
             </p>
-          </ContentContainer>
+          </AboutContentContainer>
         </div>
-        <div className="box3">
-          <ContentContainer>
+        <div className="box box3">
+          <AboutContentContainer>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus, ratione. Corporis recusandae amet aut distinctio,
@@ -38,14 +38,14 @@ const About = () => {
               exercitationem animi! Eum, quisquam. Recusandae accusantium
               dignissimos officia amet rerum alias.
             </p>
-          </ContentContainer>
+          </AboutContentContainer>
         </div>
-      </Three_T4_8B12>
+      </THREE_T4_8B12>
     </PageContainer>
   );
 };
 
-const ContentContainer = styled.div`
+const AboutContentContainer = styled.div`
   ${flexy("center")};
   box-sizing: border-box;
   min-height: 300px;

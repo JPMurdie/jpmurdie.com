@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { flexy, fontSize } from "./GlobalStyle";
+import { flexy } from "./GlobalStyle";
 
 export const PageContainer = styled.div`
   //STANDARD PAGE CONTAINER
@@ -8,6 +8,7 @@ export const PageContainer = styled.div`
   margin-top: 10vh;
   padding: 2rem;
   box-sizing: border-box;
+  color: var(--textColor);
   //PAGE CONTAINER MEDIA QUERIES
   @media only screen and (max-width: 1023px), screen and (max-height: 841px) {
     height: auto;
@@ -19,8 +20,8 @@ export const PageContainer = styled.div`
 `;
 
 //3 BOX LAYOUTS
-export const Three_T4_8B12 = styled.div`
-  //ABOUT PAGE LAYOUT
+export const THREE_T4_8B12 = styled.div`
+  //THREE_T4_8B12 LAYOUT
   position: relative;
   height: 100%;
   width: 100%;
@@ -29,9 +30,7 @@ export const Three_T4_8B12 = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   //BOXES
-  .box1,
-  .box2,
-  .box3 {
+  .box {
     box-sizing: inherit;
     overflow: hidden;
     min-height: 300px;
@@ -84,4 +83,17 @@ export const Three_T4_8B12 = styled.div`
       height: auto;
     }
   }
+`;
+
+//4 BOX LAYOUTS
+export const FOUR_T2_B2 = styled.div`
+  // FOUR_T2_B2 LAYOUT
+  position: relative;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  ${flexy("center")};
+  flex-direction: row;
+  flex-wrap: wrap;
+  //BOXES
 `;

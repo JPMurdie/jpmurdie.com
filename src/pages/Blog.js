@@ -1,10 +1,12 @@
 import React from "react";
+// PageStyles
+import { PageContainer } from "../components/PageStyles";
 
 const Blog = () => {
   return (
-    <div id="Blog">
+    <PageContainer>
       <h2>Blog</h2>
-    </div>
+    </PageContainer>
   );
 };
 

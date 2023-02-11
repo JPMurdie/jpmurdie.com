@@ -1,29 +1,41 @@
-import React, { useRef, useState } from "react";
-import styled, { css } from "styled-components";
-import Media from "react-media";
+import React, { useRef } from "react";
+import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
-import GlobalStyle from "./GlobalStyle";
 import { NavHeader } from "./NavStyles";
+//Router
+import { Link } from "react-router-dom";
 
 function Nav() {
   const navRef = useRef();
 
   const showNav = () => {
-    console.log(navRef);
-    navRef.current.classList.toggle("responsive_nav");
+    navRef.current.classList.add("responsive_nav");
+    navRef.current.classList.remove("mobile_responsive_nav");
+  };
+
+  const hideNav = () => {
+    navRef.current.classList.add("mobile_responsive_nav");
+    navRef.current.classList.remove("responsive_nav");
   };
 
   return (
     <NavHeader>
-      <div id="logo">
-        <a>JPM Designs</a>
+      <div>
+        <NavLink id="logo" to="/">
+          JPM Designs
+        </NavLink>
       </div>
       <nav ref={navRef}>
-        <a href="">My Work</a>
-        <a href="">My CV</a>
-        <a href="">Shits & Giggles</a>
-        <a href="">Contact Me</a>
-        <button className="nav-btn nav-close-btn" onClick={showNav}>
+        <NavLink className="link" to="/mywork" onClick={hideNav}>
+          My Work
+        </NavLink>
+        <NavLink className="link" to="/blog" onClick={hideNav}>
+          Shits & Giggles
+        </NavLink>
+        <NavLink className="link" to="/contactme" onClick={hideNav}>
+          Contact Me
+        </NavLink>
+        <button className="nav-btn nav-close-btn" onClick={hideNav}>
           <FaTimes />
         </button>
       </nav>
@@ -33,5 +45,12 @@ function Nav() {
     </NavHeader>
   );
 }
+
+const NavLink = styled(Link)`
+  text-decoration: none;
+  a {
+    margin-left: 0;
+  }
+`;
 
 export default Nav;

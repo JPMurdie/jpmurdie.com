@@ -1,10 +1,13 @@
 import React from "react";
 
+// PageStyles
+import { PageContainer } from "../components/PageStyles";
+
 const ContactMe = () => {
   return (
-    <div id="ContactMe">
-      <h2>ContactMe</h2>
-    </div>
+    <PageContainer>
+      <h2>Contact Me</h2>
+    </PageContainer>
   );
 };
 
