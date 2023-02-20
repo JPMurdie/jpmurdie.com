@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { flexy } from "./GlobalStyle";
+import { flexy, fontSize } from "./GlobalStyle";
 
 export const PageContainer = styled.div`
   //STANDARD PAGE CONTAINER
@@ -86,7 +86,7 @@ export const THREE_T4_8B12 = styled.div`
 `;
 
 //4 BOX LAYOUTS
-export const FOUR_T2_B2 = styled.div`
+export const SIX_T1_B1N4 = styled.div`
   // FOUR_T2_B2 LAYOUT
   position: relative;
   height: 100%;
@@ -95,5 +95,88 @@ export const FOUR_T2_B2 = styled.div`
   ${flexy("center")};
   flex-direction: row;
   flex-wrap: wrap;
+  Overflow: hidden;
+  .logo {
+    text-decoration: none;
+    font-family: "Lobster", cursive;
+    color: var(--logo-text);
+    -webkit-text-stroke: 1px var(--textColor);
+    ${fontSize(2.4, 1.5, 4.6)}
+    cursor: pointer;
+  }
   //BOXES
+  //BOX1
+  .box1 {
+    position: relative;
+    ${flexy("center")};
+    width: 100%;
+    height: 20%;
+  }
+  .box2 {
+    position: relative;
+    ${flexy("center")};
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80%;
+    background-color: lightblue;
+    .box2_1{
+      ${flexy("center")};
+      width: 50%;
+      height: 50%;
+      background-color: red;
+    }
+    .box2_2{
+      ${flexy("center")};
+      width: 50%;
+      height: 50%;
+      background-color: grey;
+    }
+    .box2_3{
+      ${flexy("center")};
+      width: 50%;
+      height: 50%;
+      background-color: green;
+    }
+    .box2_4{
+      ${flexy("center")};
+      width: 50%;
+      height: 50%;
+      background-color: yellow;
+    }
+  }
+  @media only screen and (max-width: 1023px) {
+    .box2 {
+      flex-direction: column;
+      height: auto;
+      .box2_1{
+      ${flexy("center")};
+      width: 100%;
+      height: 50%;
+      min-height: 250px;
+      background-color: red;
+    }
+    .box2_2{
+      ${flexy("center")};
+      width: 100%;
+      height: 50%;
+      min-height: 250px;
+      background-color: grey;
+    }
+    .box2_3{
+      ${flexy("center")};
+      width: 100%;
+      height: 50%;
+      min-height: 250px;
+      background-color: green;
+    }
+    .box2_4{
+      ${flexy("center")};
+      width: 100%;
+      height: 50%;
+      min-height: 250px;
+      background-color: yellow;
+    }
+    }
+  };
 `;
