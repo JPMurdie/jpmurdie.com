@@ -42,12 +42,21 @@ body {
 }
 
 h2{
+    margin: 0;
+    padding: 0;
     font-weight: lighter;
     font-size: 4rem;
 }
 
 h4{
     font-size: 2rem;
-}`;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+`;
 
 export default GlobalStyle;

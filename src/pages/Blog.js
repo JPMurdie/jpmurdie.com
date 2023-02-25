@@ -1,11 +1,43 @@
 import React from "react";
 // PageStyles
-import { PageContainer } from "../components/PageStyles";
+import { PageContainer, BLOG_LINK_BOX } from "../components/PageStyles";
 
 const Blog = () => {
   return (
     <PageContainer>
-      <h2>Blog</h2>
+      <BLOG_LINK_BOX>
+      <div className="title-holder">
+        1
+      </div>
+      <div className="blurb-holder">
+        2
+      </div>
+      <div className="img-holder">
+        3
+      </div>
+      </BLOG_LINK_BOX>
+      <BLOG_LINK_BOX>
+      <div className="title-holder">
+        1
+      </div>
+      <div className="blurb-holder">
+        2
+      </div>
+      <div className="img-holder">
+        3
+      </div>
+      </BLOG_LINK_BOX>
+      <BLOG_LINK_BOX>
+      <div className="title-holder">
+        1
+      </div>
+      <div className="blurb-holder">
+        2
+      </div>
+      <div className="img-holder">
+        3
+      </div>
+      </BLOG_LINK_BOX>
     </PageContainer>
   );
 };

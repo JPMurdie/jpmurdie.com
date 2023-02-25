@@ -4,6 +4,7 @@ import { flexy, fontSize } from "./GlobalStyle";
 export const PageContainer = styled.div`
   //STANDARD PAGE CONTAINER
   ${flexy("center")}
+  flex-wrap: wrap;
   height: 90vh;
   margin-top: 10vh;
   padding: 2rem;
@@ -180,3 +181,47 @@ export const SIX_T1_B1N4 = styled.div`
     }
   };
 `;
+
+// X BOX LAYOUTS
+export const BLOG_LINK_BOX = styled.div`
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+  background-color: pink;
+  width: 100%;
+  height: 200px;
+  min-height: 200px;
+  margin-bottom: 2rem;
+  .title-holder{
+    grid-column: 1 / 4;
+    grid-row: 1/2;
+    background-color: blue;
+    border: black;
+  }
+  .blurb-holder {
+    grid-column: 1 / 4;
+    grid-row: 2/5;
+    background-color: red;
+  }
+.img-holder{
+  grid-column: 4 / 5;
+  grid-row: 1/5;
+  background-color: green;
+}
+@media only screen and (max-width: 768px) {
+  [class*="-holder"] {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+  }
+  [class*="title-"] {
+    grid-row: 1 / 2;
+  }
+  [class*="blurb-"] {
+    grid-row:  3/4;
+  }
+  [class*="img-"] {
+    grid-row: 2/3;
+    
+  }
+}
+`
