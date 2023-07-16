@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Inter:wght@400;700&family=Lato:wght@400;700&family=Lobster&display=swap");
 
 :root{
-    --background: #03001c;
+    --background: #000000;
     --feature-background: #301e67;
     --logo-text: #5b8fb9;
     --textColor: #B6EADA;
