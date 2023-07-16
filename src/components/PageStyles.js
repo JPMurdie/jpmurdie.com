@@ -4,19 +4,17 @@ import { flexy, fontSize } from "./GlobalStyle";
 export const PageContainer = styled.div`
   //STANDARD PAGE CONTAINER
   ${flexy("center")}
-  flex-wrap: wrap;
-  height: 90vh;
-  margin-top: 10vh;
-  padding: 2rem;
   box-sizing: border-box;
+  flex-wrap: wrap;
+  height: 80vh;
+  margin-top: 10vh;
+  background-color: #2e2e30;
   color: var(--textColor);
   //PAGE CONTAINER MEDIA QUERIES
   @media only screen and (max-width: 1023px), screen and (max-height: 841px) {
-    height: auto;
     overflow-y: scroll;
   }
   @media only screen and (max-width: 1023px) {
-    margin-top: 100px;
   }
 `;
 
@@ -25,7 +23,7 @@ export const THREE_T4_8B12 = styled.div`
   //THREE_T4_8B12 LAYOUT
   position: relative;
   height: 100%;
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
   ${flexy("center")};
   flex-direction: row;
@@ -34,34 +32,30 @@ export const THREE_T4_8B12 = styled.div`
   .box {
     box-sizing: inherit;
     overflow: hidden;
-    min-height: 300px;
-    height: 50%;
   }
   //BOX1
   .box1 {
-    width: 30%;
+    max-height: 30%;
+    width: 100%;
   }
   //BOX2
   .box2 {
-    background: red;
-    width: 70%;
+    max-height: 60%;
+    width: 100%;
   }
   //BOX3
   .box3 {
-    background: blue;
+    height: 10%;
     width: 100%;
   }
   //ABOUTPAGE LAYOUT MEDIA QUERIES
   @media only screen and (max-width: 1023px) {
     ${flexy("center")};
-    margin-top: 2rem;
     height: auto;
-    margin-bottom: 2rem;
     //BOXES
     .box1,
     .box2,
     .box3 {
-      margin-bottom: 2rem;
     }
     //BOX1
     .box1 {

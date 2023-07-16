@@ -4,6 +4,7 @@ import { PageContainer, THREE_T4_8B12 } from "../components/PageStyles";
 import { flexy } from "../components/GlobalStyle";
 //Images
 import lensaImage from "../img/about-img.jpg";
+import logo from "../img/logo.png";
 
 const About = () => {
   return (
@@ -11,33 +12,20 @@ const About = () => {
       <THREE_T4_8B12>
         <div className="box box1">
           <AboutContentContainer>
-            <img src={lensaImage} alt="" />
+            <img src={logo} alt="" />
           </AboutContentContainer>
         </div>
         <div className="box box2">
           <AboutContentContainer>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Repellendus, dolores perferendis, maxime ipsam illo impedit
-              tempora consequatur itaque, architecto ducimus iure vero
-              perspiciatis quam est. Expedita voluptate ad, eum repudiandae in
-              temporibus debitis architecto obcaecati quam quas sed explicabo
-              consectetur distinctio quae placeat esse veniam tempore possimus
-              similique ea. Rerum!
+              Welcome to my website. I'm a Esports enthusiast and a frontend web developer. 
+              Stay here for updates on my journey to becoming a professional. I will be starting to stream shortly. 
+              The ethos around my content is 'You must at first be terrible and accept that in order to improve. This site is very much a work in progress, responsiveness is dodgy at the moment.'
             </p>
           </AboutContentContainer>
         </div>
         <div className="box box3">
           <AboutContentContainer>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus, ratione. Corporis recusandae amet aut distinctio,
-              sunt iure asperiores obcaecati fugiat placeat quaerat nam
-              doloremque earum non. Ea facere repellat officia corporis iste
-              velit, accusamus, sunt temporibus atque assumenda eaque,
-              exercitationem animi! Eum, quisquam. Recusandae accusantium
-              dignissimos officia amet rerum alias.
-            </p>
           </AboutContentContainer>
         </div>
       </THREE_T4_8B12>
@@ -48,7 +36,6 @@ const About = () => {
 const AboutContentContainer = styled.div`
   ${flexy("center")};
   box-sizing: border-box;
-  min-height: 300px;
   height: 100%;
   padding: 2rem;
   margin-bottom: 1rem;
@@ -56,10 +43,8 @@ const AboutContentContainer = styled.div`
     box-sizing: border-box;
     padding: 0.5rem;
     object-fit: cover;
-    height: 100%;
-    max-height: 275px;
+    max-height: 200px;
     width: auto;
-    border-radius: 50%;
   }
   p {
     ${flexy("center")};

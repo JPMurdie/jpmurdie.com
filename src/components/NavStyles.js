@@ -5,31 +5,42 @@ import { flexy, fontSize } from "./GlobalStyle";
 export const NavHeader = styled.div`
   //BASED STYLINGS
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
-  min-height: 100px;
-  height: 10vh;
+  max-height: 10vh;
+  background-color: #2e2e30;
   ${flexy({ jc: "space-between" })}
   ${fontSize(1.6, 1, 2)}
   box-sizing: border-box;
-  padding: 1rem 10%;
-  background-color: var(--feature-background);
+  padding: 2rem 10% 2rem 10%;
   color: var(--textColor);
   //LOGO
   #logo {
-    text-decoration: none;
-    font-family: "Lobster", cursive;
-    color: var(--logo-text);
-    -webkit-text-stroke: 1px var(--textColor);
-    ${fontSize(2.4, 1.5, 4.6)}
-    cursor: pointer;
+    box-sizing: inherit;
+    overflow: hidden;
+    min-height: 300px;
+    height: 50%;
+    img{
+      max-width:100%;
+      height: 80px;
+    }
   }
   //NAV
   nav {
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 80%;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--feature-background);
+    .link-wrapper{
+      max-height: 50%;
+      display: inherit;
+      align-items: justify;
+    }
     a {
       border-radius: 10px;
       margin: 0 1rem;
@@ -39,9 +50,9 @@ export const NavHeader = styled.div`
       transition: 1s ease-in-out;
       border: 5px solid var(--feature-background);
       :hover {
-        border: 5px solid var(--background);
-        background-color: var(--textColor);
-        color: var(--background);
+        border-bottom: 5px solid var(--background);
+        border-top: 5px solid var(--background);
+        border-radius: 0px;
       }
     }
   }
@@ -67,14 +78,8 @@ export const NavHeader = styled.div`
     left: 0;
     width: 100%;
     min-height: 100px;
-    height: 10vh;
-    //LOGO LESS THAN 1023PX
-    #logo {
-      ${fontSize(2, 2.5, 4)}
-      ${flexy({ jc: "left" })}
-      padding: 1rem 1rem;
-      width: 100%;
-    }
+    border-radius: 0px;
+    ${flexy({ jc: "right" })}
     //NAV LESS THAN 1023PX
     nav {
       position: fixed;

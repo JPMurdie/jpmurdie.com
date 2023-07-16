@@ -18,9 +18,9 @@ const GlobalStyle = createGlobalStyle`
 
 :root{
     --background: #000000;
-    --feature-background: #301e67;
+    --feature-background: #552fc7;
     --logo-text: #5b8fb9;
-    --textColor: #B6EADA;
+    --textColor: #ddd044;
 }
  
 html {

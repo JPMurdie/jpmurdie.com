@@ -4,6 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { NavHeader } from "./NavStyles";
 //Router
 import { Link } from "react-router-dom";
+//Images
 
 function Nav() {
   const navRef = useRef();
@@ -20,17 +21,13 @@ function Nav() {
 
   return (
     <NavHeader>
-      <div>
-        <NavLink id="logo" to="/">
-          JPM Designs
-        </NavLink>
-      </div>
       <nav ref={navRef}>
+        <div className="link-wrapper">
         <NavLink className="link" to="/mywork" onClick={hideNav}>
           My Work
         </NavLink>
         <NavLink className="link" to="/blog" onClick={hideNav}>
-          Shits & Giggles
+          Blog
         </NavLink>
         <NavLink className="link" to="/contactme" onClick={hideNav}>
           Contact Me
@@ -38,6 +35,7 @@ function Nav() {
         <button className="nav-btn nav-close-btn" onClick={hideNav}>
           <FaTimes />
         </button>
+        </div>
       </nav>
       <button className="nav-btn" onClick={showNav}>
         <FaBars />

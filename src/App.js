@@ -8,6 +8,8 @@ import About from "./pages/About";
 import MyWork from "./pages/MyWork";
 import Blog from "./pages/Blog";
 import ContactMe from "./pages/ContactMe";
+//Footer
+import Footer from "./components/Footer";
 //Router
 import { Routes, Route, useLocation } from "react-router-dom";
 //Animation
@@ -28,6 +30,7 @@ function App() {
           <Route path="/contactme" exact element={<ContactMe />} />
         </Routes>
       </AnimatePresence>
+      <Footer />
     </div>
   );
 }
